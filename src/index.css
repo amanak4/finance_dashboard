@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      scroll-padding-top: 2.5rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    margin: 0;
+    min-height: 100svh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :root {
+    --bg: #f0ede6;
+    --fg: #161512;
+    --fg-muted: #5c574e;
+    --surface: #faf8f4;
+    --surface-2: #ebe6dc;
+    --surface-hover: #e2ddd2;
+    --border: #d4cec3;
+    --accent: #b45309;
+    --accent-soft: rgba(180, 83, 9, 0.12);
+    --ring: rgba(180, 83, 9, 0.45);
+    --btn-primary-bg: #b45309;
+    --btn-primary-fg: #fffaf5;
+    --danger: #b91c1c;
+    --tone-income-bg: rgba(5, 150, 105, 0.12);
+    --tone-income-fg: #047857;
+    --tone-expense-bg: rgba(225, 29, 72, 0.1);
+    --tone-expense-fg: #be123c;
+    --chart-grid: rgba(22, 21, 18, 0.12);
+    --chart-1: #b45309;
+    --chart-2: #0d9488;
+    --chart-3: #6366f1;
+    --chart-4: #c026d3;
+    --chart-5: #ca8a04;
+    --chart-6: #2563eb;
+    --shadow-card: 0 1px 2px rgba(22, 21, 18, 0.06), 0 12px 32px rgba(22, 21, 18, 0.06);
+  }
+
+  .dark {
+    --bg: #0f0e0c;
+    --fg: #f5f2eb;
+    --fg-muted: #a39e93;
+    --surface: #1a1815;
+    --surface-2: #24211c;
+    --surface-hover: #2e2a24;
+    --border: #3a352d;
+    --accent: #f59e0b;
+    --accent-soft: rgba(245, 158, 11, 0.15);
+    --ring: rgba(245, 158, 11, 0.5);
+    --btn-primary-bg: #d97706;
+    --btn-primary-fg: #1c1410;
+    --danger: #f87171;
+    --tone-income-bg: rgba(52, 211, 153, 0.12);
+    --tone-income-fg: #6ee7b7;
+    --tone-expense-bg: rgba(251, 113, 133, 0.12);
+    --tone-expense-fg: #fda4af;
+    --chart-grid: rgba(245, 242, 235, 0.08);
+    --chart-1: #f59e0b;
+    --chart-2: #2dd4bf;
+    --chart-3: #a5b4fc;
+    --chart-4: #e879f9;
+    --chart-5: #facc15;
+    --chart-6: #60a5fa;
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.35), 0 16px 40px rgba(0, 0, 0, 0.45);
+  }
+}
+
+@keyframes modal-pop {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
